@@ -1,0 +1,196 @@
+{
+    "LicenseKey": [
+        "",
+        "string"
+    ],
+    "AdminLogin": [
+        "superadmin",
+        "string"
+    ],
+    "AdminPassword": [
+        "*0",
+        "string"
+    ],
+    "AdminLanguage": [
+        "English",
+        "string"
+    ],
+    "DBType": [
+        "MySQL",
+        "spec",
+        "\\Aurora\\System\\Enums\\DbType"
+    ],
+    "DBPrefix": [
+        "au_",
+        "string"
+    ],
+    "DBHost": [
+        "127.0.0.1",
+        "string"
+    ],
+    "DBName": [
+        "cp_aftlgc",
+        "string"
+    ],
+    "DBLogin": [
+        "da_admin",
+        "string"
+    ],
+    "DBPassword": [
+        "Lw5natZQ4m",
+        "string"
+    ],
+    "UseSlaveConnection": [
+        false,
+        "bool"
+    ],
+    "DBSlaveHost": [
+        "127.0.0.1",
+        "string"
+    ],
+    "DBSlaveName": [
+        "",
+        "string"
+    ],
+    "DBSlaveLogin": [
+        "root",
+        "string"
+    ],
+    "DBSlavePassword": [
+        "",
+        "string"
+    ],
+    "DBUseExplain": [
+        false,
+        "bool"
+    ],
+    "DBUseExplainExtended": [
+        false,
+        "bool"
+    ],
+    "DBLogQueryParams": [
+        false,
+        "bool"
+    ],
+    "DBDebugBacktraceLimit": [
+        false,
+        "bool"
+    ],
+    "EnableLogging": [
+        true,
+        "bool"
+    ],
+    "EnableEventLogging": [
+        true,
+        "bool"
+    ],
+    "LoggingLevel": [
+        "Full",
+        "spec",
+        "\\Aurora\\System\\Enums\\LogLevel"
+    ],
+    "LogFileName": [
+        "log-{Y-m-d}.txt",
+        "string"
+    ],
+    "LogCustomFullPath": [
+        "",
+        "string"
+    ],
+    "LogPostView": [
+        false,
+        "bool"
+    ],
+    "EnableMultiChannel": [
+        false,
+        "bool"
+    ],
+    "EnableMultiTenant": [
+        false,
+        "bool"
+    ],
+    "TenantGlobalCapa": [
+        "",
+        "string"
+    ],
+    "AllowThumbnail": [
+        true,
+        "bool"
+    ],
+    "ThumbnailMaxFileSizeMb": [
+        5,
+        "int"
+    ],
+    "CacheCtrl": [
+        true,
+        "bool"
+    ],
+    "CacheLangs": [
+        false,
+        "bool"
+    ],
+    "CacheTemplates": [
+        false,
+        "bool"
+    ],
+    "DisplayServerErrorInformation": [
+        true,
+        "bool"
+    ],
+    "EnableImap4PlainAuth": [
+        false,
+        "bool"
+    ],
+    "RedirectToHttps": [
+        false,
+        "bool"
+    ],
+    "SocketConnectTimeoutSeconds": [
+        20,
+        "int"
+    ],
+    "SocketGetTimeoutSeconds": [
+        20,
+        "int"
+    ],
+    "SocketVerifySsl": [
+        false,
+        "bool"
+    ],
+    "UseAppMinJs": [
+        true,
+        "bool"
+    ],
+    "XFrameOptions": [
+        "",
+        "string"
+    ],
+    "RemoveOldLogs": [
+        true,
+        "bool"
+    ],
+    "LogStackTrace": [
+        false,
+        "bool"
+    ],
+    "ExpireUserSessionsBeforeTimestamp": [
+        0,
+        "int"
+    ],
+    "PasswordMinLength": [
+        0,
+        "int"
+    ],
+    "PasswordMustBeComplex": [
+        false,
+        "bool"
+    ],
+    "StoreAuthTokenInDB": [
+        false,
+        "bool"
+    ],
+    "AuthTokenExpirationLifetimeDays": [
+        0,
+        "int"
+    ]
+}
