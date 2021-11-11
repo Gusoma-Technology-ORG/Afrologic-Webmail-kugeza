@@ -1,0 +1,30 @@
+{
+    "Disabled": [
+        false,
+        "bool"
+    ],
+    "ServerModuleName": [
+        "MailSignup",
+        "string"
+    ],
+    "HashModuleName": [
+        "signup",
+        "string"
+    ],
+    "CustomLogoUrl": [
+        "",
+        "string"
+    ],
+    "InfoText": [
+        "",
+        "string"
+    ],
+    "BottomInfoHtmlText": [
+        "",
+        "string"
+    ],
+    "DomainList": [
+        ["kugeza.com"],
+        "array"
+    ]
+}

@@ -1,0 +1,35 @@
+[06:02:16][213.205.240.86][2][Core] > logout
+[06:03:11][213.205.240.86][5][Core] > login-success: munga@kugeza.com
+[06:03:33][213.205.240.86][5][Core] > logout
+[06:33:19][213.205.240.54][5][Core] > logout
+[08:50:05][197.157.155.222][11][Mail] > message-send: raissa.tumukunde@kugeza.com
+[08:55:13][197.157.155.222][11][Mail] > message-send: raissa.tumukunde@kugeza.com
+[08:57:34][197.157.155.222][11][Mail] > message-send: raissa.tumukunde@kugeza.com
+[09:17:38][213.205.240.54][5][Core] > login-success: munga@kugeza.com
+[09:19:00][213.205.240.54][5][Core] > logout
+[11:25:08][213.205.240.54][5][Core] > login-success: munga@kugeza.com
+[11:42:03][213.205.240.54][5][Core] > logout
+[12:17:18][129.45.15.188][0][Core] > login-failed
+[12:24:00][118.107.133.146][0][Core] > login-failed
+[12:24:13][118.107.133.146][0][Core] > login-failed
+[14:30:20][96.21.207.118][0][Core] > login-failed
+[14:31:16][96.21.207.118][0][Core] > login-failed
+[14:31:56][96.21.207.118][0][Core] > login-failed
+[14:35:09][96.21.207.118][0][Core] > login-failed
+[14:35:28][96.21.207.118][0][Core] > login-failed
+[14:42:32][96.21.207.118][0][Core] > login-failed
+[14:43:18][96.21.207.118][0][Core] > login-failed
+[14:44:25][213.205.240.54][15][Core] > login-success: mariesylvie.bisizi@kugeza.com
+[14:44:31][213.205.240.54][15][Core] > logout
+[14:44:38][213.205.240.54][5][Core] > login-success: munga@kugeza.com
+[14:50:20][213.205.240.54][5][Core] > logout
+[14:50:36][213.205.240.54][15][Core] > login-success: mariesylvie.bisizi@kugeza.com
+[14:50:40][213.205.240.54][15][Core] > logout
+[14:51:04][213.205.240.54][0][Core] > login-failed
+[14:51:21][213.205.240.54][0][Core] > login-failed
+[14:57:59][96.21.207.118][15][Core] > login-success: mariesylvie.bisizi@kugeza.com
+[15:25:23][213.205.240.54][5][Core] > login-success: munga@kugeza.com
+[17:38:09][109.128.134.5][8][Mail] > message-send: johan.sebukire@kugeza.com
+[18:19:02][67.225.28.22][9][Mail] > message-send: iliiza.karangwa@kugeza.com
+[18:39:01][109.128.134.5][8][Mail] > message-send: johan.sebukire@kugeza.com
+[18:40:05][67.225.28.22][9][Mail] > message-send: iliiza.karangwa@kugeza.com

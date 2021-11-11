@@ -1,0 +1,57 @@
+{
+  "name": "admin-panel-vue-webclient",
+  "version": "0.0.1",
+  "description": "Admin panel",
+  "productName": "admin-panel",
+  "author": "Afterlogic",
+  "private": true,
+  "scripts": {
+    "prepare-modules": "node build-scripts/prepare-modules.js",
+    "prepare-stores": "node build-scripts/prepare-stores.js",
+    "prepare-langs": "node build-scripts/prepare-langs.js",
+    "prepare-files": "node build-scripts/prepare-files.js",
+    "build-production": "node build-scripts/build-production.js",
+    "lint": "eslint --ext .js,.vue ./",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.10.5",
+    "axios": "^0.21.1",
+    "core-js": "^3.13.0",
+    "file-saver": "^2.0.5",
+    "fs-extra": "^10.0.0",
+    "iniparser": "^1.0.5",
+    "quasar": "^1.15.16",
+    "querystring": "^0.2.1",
+    "vue-cookies": "^1.7.4",
+    "vue-i18n": "^8.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app": "^2.2.7",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^7.27.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-vue": "^7.7.0",
+    "eslint-webpack-plugin": "^2.4.0"
+  },
+  "browserslist": [
+    "ie >= 11",
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

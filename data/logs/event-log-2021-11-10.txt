@@ -1,0 +1,20 @@
+[05:19:53][213.205.200.20][5][Core] > logout
+[08:01:14][41.138.84.138][11][Mail] > message-send: raissa.tumukunde@kugeza.com
+[10:59:32][197.157.155.42][11][Mail] > message-send: raissa.tumukunde@kugeza.com
+[11:18:20][197.157.155.42][11][Mail] > message-send: raissa.tumukunde@kugeza.com
+[11:30:42][197.157.155.42][11][Mail] > message-send: raissa.tumukunde@kugeza.com
+[13:42:48][213.205.200.20][5][Core] > login-success: munga@kugeza.com
+[13:57:32][213.205.200.20][5][Core] > logout
+[14:01:53][213.205.200.20][0][Core] > login-failed
+[14:02:09][213.205.200.20][0][Core] > login-failed
+[14:06:19][41.138.87.76][11][Mail] > message-send: raissa.tumukunde@kugeza.com
+[14:09:19][213.205.200.20][5][Core] > login-success: munga@kugeza.com
+[14:16:10][213.205.200.20][5][Mail] > message-send: munga@kugeza.com
+[16:28:36][41.138.84.133][11][Mail] > message-send: raissa.tumukunde@kugeza.com
+[16:37:18][213.205.200.20][5][Core] > login-success: munga@kugeza.com
+[16:48:50][213.205.200.20][5][Core] > logout
+[16:51:31][213.205.200.20][5][Core] > login-success: munga@kugeza.com
+[17:42:40][109.128.134.5][8][Mail] > message-send: johan.sebukire@kugeza.com
+[17:59:28][188.26.210.19][12][Mail] > message-send: aristote.ruhindura@kugeza.com
+[18:18:05][213.205.200.20][5][Core] > logout
+[18:19:03][213.205.200.20][5][Core] > login-success: munga@kugeza.com

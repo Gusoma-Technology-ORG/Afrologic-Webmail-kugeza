@@ -1,0 +1,15 @@
+{
+    "Disabled": [
+		false,
+		"bool"
+	],
+    "SuperadminWhitelistIp": [
+        [
+        ],
+        "array"
+    ],
+	"AllowLoginFromCoreModule": [
+		false,
+		"bool"
+	]
+}

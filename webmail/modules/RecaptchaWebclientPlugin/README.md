@@ -1,1 +1,0 @@
-# aurora-module-webclient-recaptcha-plugin

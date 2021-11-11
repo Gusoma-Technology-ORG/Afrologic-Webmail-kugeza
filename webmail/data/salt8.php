@@ -1,1 +1,0 @@
-<?php \Aurora\System\Api::$sSalt = "MTYzMTMwODg4My44NTU2OTcxNDE2MzEzMDg4ODMuODU1NjY4MDQ=";

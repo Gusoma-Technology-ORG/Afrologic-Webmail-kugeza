@@ -1405,7 +1405,7 @@ html.rtl .toolbar .item.next .icon:before {
   padding-bottom: 0px;
 }
 .fields .hint {
-  color: #929292;
+  color: #ffffff;
   margin: 0 0 10px;
   padding: 0 0 10px;
   padding: 0px;
@@ -2665,7 +2665,7 @@ html.rtl .custom_selector .dropdown_content {
   display: inline-block;
 }
 .attachments .item .size {
-  color: #929292;
+  color: #ffffff;
   float: right;
   margin: 0px 8px -5em 0px;
 }
@@ -5053,7 +5053,7 @@ html.mobile .LoginLayout {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  color: #929292;
+  color: #ffffff;
   display: inline-block;
   font-size: 9pt;
   padding: 20px;
@@ -5308,7 +5308,7 @@ html.mobile .LoginLayout {
 }
 .login_panel .login_panel_content .content.social_register .question_title,
 .login_panel .login_panel_content .content.send_question .question_title {
-  color: #929292;
+  color: #ffffff;
   display: block;
   font-size: 11pt;
 }
@@ -5378,7 +5378,7 @@ html.mobile .LoginLayout {
   visibility: visible;
 }
 .login_panel .description {
-  color: #929292;
+  color: #ffffff;
   margin-top: 20px;
 }
 .login_panel .social_description {
@@ -5853,7 +5853,7 @@ html.rtl .MailNotesPlugin .message_viewer .notes_container.panel_bottom .buttons
   margin-right: 6px;
 }
 .MailNotesPlugin .message_viewer .notes_container.panel_bottom .buttons .hint {
-  color: #929292;
+  color: #ffffff;
 }
 .MailNotesPlugin .message_viewer .notes_container .note_edit {
   width: 100%;
@@ -6997,7 +6997,7 @@ html.rtl .message_viewer .message_header .from {
   width: 99%;
 }
 .message_viewer .appointment .event_state {
-  color: #929292;
+  color: #ffffff;
   padding-left: 5px;
 }
 .message_viewer .appointment .buttons {
@@ -7681,7 +7681,7 @@ blockquote {
   margin-left: 10px;
 }
 .items_list.simple_list .item.fetcher .label {
-  color: #929292;
+  color: #ffffff;
 }
 .items_list.simple_list .item.fetcher .title {
   font-weight: bold;
@@ -7961,7 +7961,7 @@ blockquote {
   text-align: left;
 }
 .login_panel .social .info {
-  color: #929292;
+  color: #ffffff;
   font-size: 14px;
   margin: 14px 2px 10px;
   text-align: center;
@@ -8006,7 +8006,7 @@ blockquote {
   margin: 0 0 10px 0;
 }
 .popup_panel .import_pgp_key_area .key_item.disabled {
-  color: #929292;
+  color: #ffffff;
   padding-left: 24px;
 }
 .popup_panel .import_pgp_key_area .key_item .key_email {
@@ -8733,7 +8733,7 @@ html.rtl .settings .signature .editor_row .editor {
 .panels.settings .ip-allow-list .folders .items_list .item .title .name .text_hint,
 .panels.settings .security .folders .items_list .item .title .name .text_hint,
 .panels.settings .two-factor-auth .folders .items_list .item .title .name .text_hint {
-  color: #929292;
+  color: #ffffff;
   font-size: smaller;
 }
 .panels.settings .ip-allow-list .folders.items_list .controls .button.rename,
@@ -8820,7 +8820,7 @@ html.mobile .LoginLayout {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  color: #929292;
+  color: #ffffff;
   display: inline-block;
   font-size: 9pt;
   padding: 20px;
@@ -9074,7 +9074,7 @@ html.mobile .LoginLayout {
 }
 .login_panel .login_panel_content .content.social_register .question_title,
 .login_panel .login_panel_content .content.send_question .question_title {
-  color: #929292;
+  color: #ffffff;
   display: block;
   font-size: 11pt;
 }
@@ -9144,7 +9144,7 @@ html.mobile .LoginLayout {
   visibility: visible;
 }
 .login_panel .description {
-  color: #929292;
+  color: #ffffff;
   margin-top: 20px;
 }
 .login_panel .social_description {
