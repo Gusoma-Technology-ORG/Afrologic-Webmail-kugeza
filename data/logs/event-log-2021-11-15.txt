@@ -1,0 +1,6 @@
+[04:40:04][213.205.200.96][18][Core] > login-success: abakiriya@kugeza.com
+[04:40:13][213.205.200.96][18][Core] > logout
+[04:40:24][213.205.200.96][5][Core] > login-success: munga@kugeza.com
+[05:50:35][213.205.200.96][5][Core] > logout
+[05:50:40][213.205.200.96][18][Core] > login-success: abakiriya@kugeza.com
+[05:50:47][213.205.200.96][18][Core] > logout

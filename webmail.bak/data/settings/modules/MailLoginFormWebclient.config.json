@@ -1,0 +1,46 @@
+{
+    "Disabled": [
+        true,
+        "bool"
+    ],
+    "ServerModuleName": [
+        "MailLoginFormWebclient",
+        "string"
+    ],
+    "HashModuleName": [
+        "mail",
+        "string"
+    ],
+    "CustomLoginUrl": [
+        "",
+        "string"
+    ],
+    "DemoLogin": [
+        "",
+        "string"
+    ],
+    "DemoPassword": [
+        "",
+        "string"
+    ],
+    "InfoText": [
+        "",
+        "string"
+    ],
+    "BottomInfoHtmlText": [
+        "Powered by \u003Ca href=\"https:\/\/afterlogic.com\/webmail-lite\" target=\"_blank\"\u003EAfterlogic WebMail Lite\u003C\/a\u003E",
+        "string"
+    ],
+    "LoginSignMeType": [
+        0,
+        "int"
+    ],
+    "AllowChangeLanguage": [
+        true,
+        "bool"
+    ],
+    "UseDropdownLanguagesView": [
+        true,
+        "bool"
+    ]
+}
