@@ -25,15 +25,60 @@
 			<div class="signup-form">
 				<form>
 					
-	     				<h4 class="register_class"
+	     				<!--<h4 class="register_class"
 					data-bind="i18n: {'key': 'COREWEBCLIENT/ACTION_REGISTER'}"
 
-					></h4>
+					></h4>-->
+				<h4 class="register_class">lyandikishe konti nshya</h4>
 					<p style="font-size: 15px;color:black;text-align:center;">                                        
 						ICYITONDERWA : niba utarigeze wiyandikisha mbere, uzuza iyi fishi kandi konte yawe izafungurwa n'itsinda. garuka mu masaha abiri, imeri yawe iraba ikora
 
-					</p>	
-				<!--	<div class="form-group">
+					</p>
+			<!--	
+					<table>
+						<tbody>
+							<tr><td text-align: left; padding: 0.5em 1em;><strong style="font-size:17px; color: black;"><input type="text" placeholder="First Name"></td></tr>
+							<tr><td text-align: left; padding: 0.5em 1em;><strong style="font-size:17px; color: black;"><input type="text" placeholder="Last Name"></td></tr>
+							<tr><td text-align: left; padding: 0.5em 1em;><strong style="font-size:17px; color: black;"><input type="password" placeholder="Password"></td></tr>
+							<tr><td text-align: left; padding: 0.5em 1em;><strong style="font-size:17px; color: black;"><input type="password" placeholder="Confirm Password"></td></tr>
+							</body>
+
+					</table>
+				
+		<?php
+																					   $servername = "localhost";
+			$username = "da_admin";
+			$password = "Lw5natZQ4m";
+			$dbname = "signup_db";
+			
+																					   $conn = new mysqli($servername, $username, $password, $dbname);
+																					   if($conn->connect_error)
+																					   {
+																					   	die("Connection Failed: ".$conn->connect_error);
+																					   }
+
+																					?>
+	
+																					<?php include 'modules/StandardLoginFormWebclient/templates/signup.php';?> -->
+		
+	  	<iframe name="votar" style="display:none;"></iframe>
+			<h2>Signup Form</h2>
+			<form action="modules/StandardLoginFormWebclient/templates/signup.php" method="post" target="votar">
+
+                 		
+                		<input type="text" name="firstname" placeholder="First Name"/>
+
+             			<br> 
+               			<input type="text" name="lastname" placeholder="Last Name"/>
+             			<br> 
+               			<input type="password" name="password" placeholder="Password"/>
+				<br>
+				<br>
+				<button type="submit" formmethod="post" formaction= "modules/StandardLoginFormWebclient/templates/signup.php" target="votar">Submit</button>
+
+           		</form>
+				
+					<!--	<div class="form-group">
 						<label for="Name"
 						data-bind="i18n: {'key': 'COREWEBCLIENT/ACTION_REGISTER_NAME'}"
 
@@ -66,7 +111,7 @@
 					></h4>
 
 
-					<p class="login_rser">(reisert)</p>
+					<p class="login_rser"> muri konti isanzwe </p>
 
 					</div>
 					<div class="fieldset">
@@ -85,7 +130,7 @@
 										i18n: {'key': 'COREWEBCLIENT/LABEL_LOGIN', 'type': 'placeholder'}, initDom: loginDom" />
 							</span>
 						</div>
-						<label for="email">Emeza ijambo ry'ibanga</label>
+						<label for="email">ljambo ry'ibanga</label>
 						<div class="row password" data-bind="css: {'focused': passwordFocus(), 'filled': password().length > 0, shake: shake()}">
 							<label for="login_password" class="placeholder"></label>
 							<span class="value">
@@ -163,10 +208,15 @@
 	<div class="vhelper"></div>
 	<div class="bottom_description" data-bind="visible: sBottomInfoHtmlText !== '', html: sBottomInfoHtmlText"></div>
 	<!--{%INCLUDE-START/Login-Footer/INCLUDE-END%}-->
+	<!--<h4>Sign UP Here </h4>-->
 </div>
 <style type="text/css">
+body{
+	background: #fff !important;
+}
 .login_panel .header .icon {
     object-fit: contain;
+    width: 100%;
 }
 	.form-group {
     display: grid;
@@ -265,6 +315,10 @@ html.ltr.cssanimations.csstransitions.flexwrap.no-pdf.no-newtab.no-mobile.no-nat
 .login_panel .login_panel_content .content {
   width: 300px;
   margin: 0 auto;
+ 
+}
+.login_panel{
+  max-width: fit-content !important;
 }
 .form-group_main .form-group {
   width: 300px;

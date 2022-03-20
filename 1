@@ -1,0 +1,11 @@
+# Prevent Apache from serving .htaccess files:
+<FilesMatch "^\.htaccess">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Remove www from any URLs that have them:
+RewriteEngine on
+RewriteCond %{HTTP_HOST} (^www\.) | (webmail$)
+RewriteRule ^(.*)$ https://email.kugeza.com/$1 [R=301,L]
+

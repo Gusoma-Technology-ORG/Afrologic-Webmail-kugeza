@@ -1,0 +1,15 @@
+[10:39:58][213.205.240.152][0][Core] > login-failed
+[10:40:22][213.205.240.152][0][Core] > login-failed
+[11:30:56][213.205.240.152][37][Core] > logout
+[11:31:12][213.205.240.152][11][Core] > login-success: raissa.tumukunde@kugeza.com
+[11:31:47][213.205.240.152][11][Mail] > message-send: raissa.tumukunde@kugeza.com
+[11:36:32][213.205.240.152][11][Core] > logout
+[11:44:14][213.205.240.152][0][Core] > login-failed
+[11:44:23][213.205.240.152][39][Core] > login-success: student@kugeza.com
+[11:54:46][213.205.240.152][0][Core] > login-failed
+[11:54:54][213.205.240.152][39][Core] > login-success: student@kugeza.com
+[12:28:04][213.205.240.152][39][Core] > logout
+[17:59:16][105.178.108.46][39][Core] > login-success: student@kugeza.com
+[19:27:09][43.248.34.79][39][Core] > login-success: student@kugeza.com
+[21:09:46][105.178.112.116][39][Core] > login-success: student@kugeza.com
+[21:10:13][105.178.112.116][39][Core] > logout

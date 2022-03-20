@@ -3,6 +3,7 @@
 	<div class="login_panel login">
 		<div data-bind="simpleTemplate: {}">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<?php include 'signup.php';?>
 </div>
 
 		<div data-bind="simpleTemplate: {}">
@@ -33,8 +34,48 @@
 					<p style="font-size: 15px;color:black;text-align:center;">                                        
 						ICYITONDERWA : niba utarigeze wiyandikisha mbere, uzuza iyi fishi kandi konte yawe izafungurwa n'itsinda. garuka mu masaha abiri, imeri yawe iraba ikora
 
-					</p>	
-				<!--	<div class="form-group">
+					</p>
+			<!--	
+					<table>
+						<tbody>
+							<tr><td text-align: left; padding: 0.5em 1em;><strong style="font-size:17px; color: black;"><input type="text" placeholder="First Name"></td></tr>
+							<tr><td text-align: left; padding: 0.5em 1em;><strong style="font-size:17px; color: black;"><input type="text" placeholder="Last Name"></td></tr>
+							<tr><td text-align: left; padding: 0.5em 1em;><strong style="font-size:17px; color: black;"><input type="password" placeholder="Password"></td></tr>
+							<tr><td text-align: left; padding: 0.5em 1em;><strong style="font-size:17px; color: black;"><input type="password" placeholder="Confirm Password"></td></tr>
+							</body>
+
+					</table>
+			-->	
+			<!--
+		<?php
+																					   $servername = "localhost";
+			$username = "da_admin";
+			$password = "Lw5natZQ4m";
+			$dbname = "signup_db";
+			
+																					   $conn = new mysqli($servername, $username, $password, $dbname);
+																					   if($conn->connect_error)
+																					   {
+																					   	die("Connection Failed: ".$conn->connect_error);
+																					   }
+
+																					?>
+																					-->
+			
+																					<h2>Signup Form</h2>
+			<form action="signup.php" method="POST">
+
+                 		First name:
+                		<input type="text" name="firstname">
+
+             			<br> Last name:
+               			<input type="text" name="lastname">
+
+                		<input type="submit" value="Submit">
+
+           		</form>
+				
+					<!--	<div class="form-group">
 						<label for="Name"
 						data-bind="i18n: {'key': 'COREWEBCLIENT/ACTION_REGISTER_NAME'}"
 

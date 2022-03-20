@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+</head>
+<body>
+    <h1>Thank You</h1>
+    <p>Here is the information you have submitted:</p>
+
+
+
+<?php
+echo 'I am here';
+                                                                                                                                                                             $servername = "localhost";
+                        $username = "da_admin";
+                        $password = "Lw5natZQ4m";
+                        $dbname = "signup_db";
+                        
+                                                                                                                                                                           $conn = new mysqli($servername, $username, $password, $dbname);
+                                                                                                                                                                           if($conn->connect_error)
+
+                      {
+
+                           die("Connection Failed: ".$conn->connect_error);
+
+																					   }
+																					    
+#	if($_SERVER["REQUEST_METHOD"] == "POST"){
+																			   if ( filter_has_var( INPUT_POST, 'submit' ){   													  	  $fname = strip_tags(trim($_POST['firstname']));
+		$lname = strip_tags(trim($_POST['lastname']));
+		$sql = "INSERT INTO RegEmail (firstname, lastname, email)
+			VALUES($fname, $lname,$fname'.'$lname)";
+		 echo '<h2>form data retrieved by using $_POST variable<h2/>'   
+																			   }
+	else
+	{
+		echo 'form not filled';
+	}
+?>
+
+</body>
+</html>
