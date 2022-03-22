@@ -945,11 +945,11 @@ html.rtl .list_notification .link {
 }
 .toolbar .content > .item:hover,
 .toolbar .content .group > .item:hover {
-  /*  background: #eeeeee;
+  /*	background: #eeeeee;
 
-  .hint {
-    background-color: darken(#eeeeee, 10%);
-  }*/
+	.hint {
+		background-color: darken(#eeeeee, 10%);
+	}*/
 }
 .toolbar .content > .item:last-child,
 .toolbar .content .group > .item:last-child {
@@ -1062,11 +1062,11 @@ html.rtl .toolbar .content .group > .item.checkstate {
 }
 .toolbar .content > .item.expand,
 .toolbar .content .group > .item.expand {
-  /*  background: #eeeeee;
+  /*	background: #eeeeee;
 
-  .hint {
-    background-color: darken(#eeeeee, 10%);
-  }*/
+	.hint {
+		background-color: darken(#eeeeee, 10%);
+	}*/
 }
 .toolbar .content .group {
   display: inline-block;
@@ -1110,11 +1110,11 @@ html.rtl .toolbar .content .group > .item:last-child {
   border-radius: 4px 0px 0px 4px;
 }
 .toolbar .content .group.expand > .item {
-  /*  background: #eeeeee;
+  /*	background: #eeeeee;
 
-  .hint {
-    background-color: darken(#eeeeee, 10%);
-  }*/
+	.hint {
+		background-color: darken(#eeeeee, 10%);
+	}*/
 }
 .toolbar .disabled .item,
 .toolbar .item.disabled {
@@ -3950,8 +3950,8 @@ html {
 }
 body {
   font: normal 9pt Helvetica, Tahoma, Arial, sans-serif;
-  height: auto;
-  background-color:#fff;
+  height: 100%;
+  background: #1998a4 no-repeat 0 0 / cover url("images/background.jpg");
   background-attachment: fixed;
 }
 .auroraMain {
@@ -5058,7 +5058,7 @@ html.mobile .LoginLayout {
   font-size: 9pt;
   padding: 20px;
   vertical-align: middle;
-  width: auto;
+  width: 280px;
 }
 .login_panel .description {
   color: #fff !important;
@@ -5117,10 +5117,8 @@ html.mobile .LoginLayout {
   display: none;
 }
 .login_panel .header .icon {
-      max-width: 220px;
-    height: auto;
-    width: 100%;
-    object-fit: contain;
+  height: 95px;
+  width: 130px;
 }
 .login_panel .header .icon:before {
   speak: none;
@@ -5256,7 +5254,7 @@ html.mobile .LoginLayout {
 .login_panel .login_panel_content .col.right {
   position: absolute;
   right: 0px;
-  width: 100%;
+  width: 276px;
 }
 .login_panel .login_panel_content .content {
   box-shadow: 0px 0px 0px #ffffff;
@@ -5275,7 +5273,7 @@ html.mobile .LoginLayout {
   left: 50%;
   margin-left: -130px;
   position: relative;
-  width: 100%;
+  width: 260px;
 }
 .login_panel .login_panel_content .content.send_question {
   -webkit-transform: rotateY(0deg);
@@ -5335,7 +5333,7 @@ html.mobile .LoginLayout {
   font-size: 12pt;
   text-shadow: 0px 1px 0px #f3f3f3;
   white-space: normal;
-  width: 100%;
+  width: 240px;
 }
 .login_panel.flipForgot .content.login,
 .login_panel.flipChangepass .content.send_question,
@@ -7861,12 +7859,12 @@ blockquote {
   padding: 4px;
 }
 .layout-horiz-split .messages_panel .toolbar .item {
-  /*        .icon {
-          display: none;
-          &.arrow {
-            display: inline-block;
-          }
-        }*/
+  /*				.icon {
+					display: none;
+					&.arrow {
+						display: inline-block;
+					}
+				}*/
 }
 .layout-horiz-split .messages_panel .toolbar .item.checkstate {
   float: left;
@@ -8825,7 +8823,7 @@ html.mobile .LoginLayout {
   font-size: 9pt;
   padding: 20px;
   vertical-align: middle;
-  width: auto;
+  width: 280px;
 }
 .login_panel .description {
   color: #fff !important;
@@ -9028,9 +9026,8 @@ html.mobile .LoginLayout {
   float: left;
   margin-top: 0px;
   opacity: 1;
-  margin-left: 50px;
   visibility: visible;
-  width: 400px;
+  width: 100%;
   -webkit-transition: -webkit-transform 600ms ease-in-out, opacity 120ms linear 240ms, visibility 1ms linear 300ms, margin-top 0ms linear 300ms;
   -moz-transition: -moz-transform 600ms ease-in-out, opacity 120ms linear 240ms, visibility 1ms linear 300ms, margin-top 0ms linear 300ms;
   transition: transform 600ms ease-in-out, opacity 120ms linear 240ms, visibility 1ms linear 300ms, margin-top 0ms linear 290ms;
@@ -9709,115 +9706,4 @@ html.rtl .LoginLayout .languages.demo {
 }
 .settings .folders .controls .button.delete_device:before {
   content: "\e606";
-}
-/* Sign up form CSS 18-sept-21 */
-.form-group {
-    display: grid;
-    text-align: left;
-    font-family: inherit;
-    width: 400px;
-    margin-top: 10px;
-}
-.form-group label{
-  font-size: 18px;
-    color: #000;
-    font-family: inherit;
-    font-weight: 600;
-}
-.form-group input {
-    padding: 14px 0px 14px 10px;
-    border: solid 1px #444;
-    border-radius: 4px;
-}
-.fieldset .row.login {
-    margin-bottom: 10px;
-}
-.form-group_main {
-    display: flex;
-}
-.signup-form {
-    padding-right: 50px;
-}
-.content.login.clearfix .fieldset label {
-    text-align: right;
-    float: left;
-    font-size: 16px;
-    color: #000;
-    font-family: inherit;
-}
-.form-group_main h4.login_class.command.enable, .form-group_main h4.register_class {
-    color: #000;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 0;
-    letter-spacing: 1px;
-}
-.form-group_main .fieldset{
-  margin: 10px 0 0;
-}
-.email_label, .password_label {
-  font-size: 16px;
-  color: #000;
-  font-weight: 500;
-   background: yellow;
-}
-.form-heading {
-  display: inline-flex;
-}
-.form-heading p.login_rser {
-  font-size: 18px;
-  color: #000;
-  font-weight: 600;
-
-}
-@media only screen and (max-width: 875px) {
-.login_panel .login_panel_content .content{
-  width: 250px;
-}
-.form-group{
-  width: 250px;
-}
-  }
-@media only screen and (max-width: 600px) {
- html{
-  overflow-x: hidden;
- }
-.screens{
-  flex-direction: initial;
-flex-wrap: nowrap;
-}
-.signup-form {
-    padding-right: 0;
-}
-.login_panel .header {
-  margin-bottom: 0px;
-  margin-top: 30px;
-}
-.form-group_main {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0 30px;
-}
-
-html.ltr.cssanimations.csstransitions.flexwrap.no-pdf.no-newtab.no-mobile.no-native-android-browser {
-  height: auto !important;
-  overflow-x: hidden !important;
-}
-.login_panel .login_panel_content .content {
-  width: 300px;
-  margin: 0 auto;
-}
-.form-group_main .form-group {
-  width: 300px;
-   margin: 0;
-  }
-.form-group_main  .row.buttons {
-  width: 300px;
-}
-.compose_popup .popup_panel{
-  width: 100%;
-  min-width: 100%;
-}
 }

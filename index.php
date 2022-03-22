@@ -17,5 +17,4 @@
  */
 
 include_once 'system/autoload.php';
-
 \Aurora\System\Application::Start();
