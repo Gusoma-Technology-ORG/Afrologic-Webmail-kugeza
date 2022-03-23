@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign up for your free account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/style.css" />
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+      input[type='radio']:checked.btn-check + label {
+        font-weight: bold;
+        background-color: green !important;
+      }
+      li {
+        font-size: 91%;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="myCard">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="myRightCtn">
+              <div class="box">
+                <div class="d-flex justify-content-start align-items-center">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="options"
+                    id="option4"
+                    onclick="en()"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-secondary" for="option4">EN</label>
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="options"
+                    id="option3"
+                    onclick="fre()"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-secondary" for="option3">FR</label>
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="options"
+                    id="option2"
+                    onclick="kin()"
+                    autocomplete="off"
+                    checked
+                  />
+                  <label class="btn btn-secondary" for="option2">KIN</label>
+                </div>
+
+                <div class="my-5 d-flex flex-column">
+                  <span class="adv-text">Gukoresha byoroshye.</span>
+                  <span class="adv-text">
+                    Igikoresho cy'itumanaho mu Kinyarwanda.
+                  </span>
+                  <span class="adv-text">
+                    Kohereza no kwakira imeri ku buntu.
+                  </span>
+                </div>
+
+                <div class="my-4" id="left-detail-panel" style="display: none">
+                  <b>Twishimiye gushiraho konti yawe y'ubuntu !</b>
+                  <p>- Nyamuneka andika aya makuru.</p>
+
+                  <b>Imeri yawe ni izina ryanyuma.izina rya mbere@kugeza.com</b>
+                  <ul>
+                    <li>
+                      Urashobora kuyikoresha kugirango winjire kuri konte yawe
+                    </li>
+                    <li>
+                      Urashobora gukoresha kohereza no kwakira ubutumwa bwa buri
+                      wese
+                    </li>
+                  </ul>
+
+                  <b>Ijambo ry'ibanga ni: ijambo ryibanga</b>
+                  <ul>
+                    <li>Ntugasangire n'umuntu uwo ari we wese</li>
+                    <li>Bika ahantu hizewe</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex flex-column align-items-center">
+              <div class="d-flex align-items-center">
+                <img
+                  src="../assets/images/Logo.png"
+                  height="120"
+                  width="250"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="wrapper mx-auto">
+              <div class="title-text">
+                <div class="title login">Injira</div>
+                <div class="title signup">Kwiyandikisha</div>
+              </div>
+              <div class="form-container">
+                <div class="slide-controls">
+                  <input
+                    onclick="toggleShowMenu()"
+                    type="radio"
+                    name="slide"
+                    id="login"
+                    checked
+                  />
+                  <input
+                    onclick="toggleShowMenu()"
+                    type="radio"
+                    name="slide"
+                    id="signup"
+                  />
+                  <label for="login" class="slide login">Injira</label>
+                  <label for="signup" class="slide signup">Kwiyandikisha</label>
+                  <div class="slider-tab"></div>
+                </div>
+                <div class="form-inner">
+                  <form action="#" class="login">
+                    <div class="field">
+                      <input type="text" placeholder="imeri" required />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="password"
+                        placeholder="ijambo ry'ibanga"
+                        required
+                      />
+                    </div>
+                    <!-- <div class="pass-link">
+                      <a href="#">Forgot password?</a>
+                    </div> -->
+                    <div class="field btn">
+                      <div class="btn-layer"></div>
+                      <input type="submit" value="Injira" />
+                    </div>
+                    <div class="signup-link">
+                      Ntabwo ufite ikonti?
+                      <a href="">Iyandikishe nonaha</a>
+                    </div>
+                  </form>
+                  <form action="#" class="signup">
+                    <div class="field">
+                      <input
+                        type="text"
+                        placeholder="Izina rya mbere"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="text"
+                        placeholder="Izina rya nyuma"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="password"
+                        placeholder="Ijambo ry'ibanga"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group my-3">
+                      <label>
+                        <input
+                          id="check_1"
+                          name="check_1"
+                          type="checkbox"
+                          required
+                        />
+                        <small class="mx-1"
+                          >Nemeye ingingo n'ibisabwa muri iyi porogaramu.
+                          Nemeranya n'amabwiriza yerekeye ubuzima bwite bw'iyi
+                          porogaramu.</small
+                        >
+                      </label>
+                    </div>
+
+                    <div class="form-group my-3">
+                      <label>
+                        <input
+                          id="check_1"
+                          name="check_1"
+                          type="checkbox"
+                          required
+                        />
+                        <small class="mx-1">
+                          Kanda aka gasanduku niba ushaka ko sisitemu yibuka
+                          amakuru yawe yinjira ako kanya - ntukande kuri aka
+                          gasanduku niba ukoresha igikoresho gisangiwe.
+                        </small>
+                      </label>
+                    </div>
+
+                    <div class="field btn">
+                      <div class="btn-layer"></div>
+                      <input type="submit" value="Iyandikishe" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      const loginText = document.querySelector('.title-text .login');
+      const loginForm = document.querySelector('form.login');
+      const loginBtn = document.querySelector('label.login');
+      const signupBtn = document.querySelector('label.signup');
+      const signupLink = document.querySelector('form .signup-link a');
+
+      signupBtn.onclick = () => {
+        loginForm.style.marginLeft = '-50%';
+        loginText.style.marginLeft = '-50%';
+      };
+
+      loginBtn.onclick = () => {
+        loginForm.style.marginLeft = '0%';
+        loginText.style.marginLeft = '0%';
+      };
+
+      signupLink.onclick = () => {
+        signupBtn.click();
+        return false;
+      };
+
+      function en() {
+        location.replace('./en.html');
+      }
+
+      function fre() {
+        location.replace('./fr.html');
+      }
+
+      function kin() {
+        location.replace('./kin.html');
+      }
+
+      function toggleShowMenu() {
+        const div = document.querySelector('#left-detail-panel');
+        if (div.style.display == 'none') {
+          div.style.display = 'block';
+        } else if (div.style.display === 'block') {
+          div.style.display = 'none';
+        }
+      }
+    </script>
+  </body>
+</html>
