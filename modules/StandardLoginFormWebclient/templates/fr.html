@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/style.css" />
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+      input[type='radio']:checked.btn-check + label {
+        font-weight: bold;
+        background-color: green !important;
+      }
+      li {
+        font-size: 91%;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="myCard">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="myRightCtn">
+              <div class="box">
+                <div class="d-flex justify-content-start align-items-center">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="options"
+                    id="option4"
+                    onclick="en()"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-secondary" for="option4">EN</label>
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="options"
+                    id="option3"
+                    onclick="fre()"
+                    autocomplete="off"
+                    checked
+                  />
+                  <label class="btn btn-secondary" for="option3">FR</label>
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="options"
+                    id="option2"
+                    onclick="kin()"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-secondary" for="option2">KIN</label>
+                </div>
+
+                <div class="my-5 d-flex flex-column">
+                  <span class="adv-text">Facile à utiliser.</span>
+                  <span class="adv-text">
+                    Outil de communication en kinyarwanda.
+                  </span>
+                  <span class="adv-text">
+                    Envoyez et recevez des e-mails gratuitement.
+                  </span>
+                </div>
+
+                <div class="my-4" id="left-detail-panel" style="display: none">
+                  <b>Félicitations pour la création de votre compte gratuit.</b>
+                  <p>- Veuillez prendre note de ces informations.</p>
+
+                  <b>Votre email est maintenant nom.prénom@kugeza.com</b>
+                  <ul>
+                    <li>
+                      Vous pouvez l'utiliser pour vous connecter à votre compte
+                    </li>
+                    <li>
+                      Vous pouvez utiliser pour envoyer et recevoir des messages
+                      de tout le monde
+                    </li>
+                  </ul>
+
+                  <b>Votre mot de passe est : mot de passe</b>
+                  <ul>
+                    <li>- Ne le partagez avec personne</li>
+                    <li>- Conservez-le dans un endroit sûr et sécurisé</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex flex-column align-items-center">
+              <div class="d-flex align-items-center">
+                <img
+                  src="../assets/images/Logo.png"
+                  height="120"
+                  width="250"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="wrapper mx-auto">
+              <div class="title-text">
+                <div class="title login">Connexion</div>
+                <div class="title signup">Créer un compte gratuit</div>
+              </div>
+              <div class="form-container">
+                <div class="slide-controls">
+                  <input
+                    onclick="toggleShowMenu()"
+                    type="radio"
+                    name="slide"
+                    id="login"
+                    checked
+                  />
+                  <input
+                    onclick="toggleShowMenu()"
+                    type="radio"
+                    name="slide"
+                    id="signup"
+                  />
+                  <label for="login" class="slide login">Connexion</label>
+                  <label for="signup" class="slide signup">S'inscrire</label>
+                  <div class="slider-tab"></div>
+                </div>
+                <div class="form-inner">
+                  <form action="#" class="login">
+                    <div class="field">
+                      <input type="text" placeholder="e-mail" required />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="password"
+                        placeholder="mot de passe"
+                        required
+                      />
+                    </div>
+                    <!-- <div class="pass-link">
+                      <a href="#">Forgot password?</a>
+                    </div> -->
+                    <div class="field btn">
+                      <div class="btn-layer"></div>
+                      <input type="submit" value="Connexion" />
+                    </div>
+                    <div class="signup-link">
+                      Pas un membre? <a href="">S'inscrire maintenant</a>
+                    </div>
+                  </form>
+                  <form action="#" class="signup">
+                    <div class="field">
+                      <input type="text" placeholder="Prénom" required />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="text"
+                        placeholder="nom de famille"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="password"
+                        placeholder="le mot de passe"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group my-3">
+                      <label>
+                        <input
+                          id="check_1"
+                          name="check_1"
+                          type="checkbox"
+                          required
+                        />
+                        <small class="mx-1"
+                          >Je suis d'accord avec les termes et conditions de ce
+                          programme.</small
+                        >
+                      </label>
+                    </div>
+
+                    <div class="form-group my-3">
+                      <label>
+                        <input
+                          id="check_1"
+                          name="check_1"
+                          type="checkbox"
+                          required
+                        />
+                        <small class="mx-1">
+                          Cochez cette case si vous souhaitez que le système se
+                          souvienne immédiatement de vos informations de
+                          connexion - ne cochez pas cette case si vous utilisez
+                          un appareil partagé.
+                        </small>
+                      </label>
+                    </div>
+
+                    <div class="field btn">
+                      <div class="btn-layer"></div>
+                      <input type="submit" value="S'inscrire" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      const loginText = document.querySelector('.title-text .login');
+      const loginForm = document.querySelector('form.login');
+      const loginBtn = document.querySelector('label.login');
+      const signupBtn = document.querySelector('label.signup');
+      const signupLink = document.querySelector('form .signup-link a');
+
+      signupBtn.onclick = () => {
+        loginForm.style.marginLeft = '-50%';
+        loginText.style.marginLeft = '-50%';
+      };
+
+      loginBtn.onclick = () => {
+        loginForm.style.marginLeft = '0%';
+        loginText.style.marginLeft = '0%';
+      };
+
+      signupLink.onclick = () => {
+        signupBtn.click();
+        return false;
+      };
+
+      function en() {
+        location.replace('./en.html');
+      }
+
+      function fre() {
+        location.replace('./fr.html');
+      }
+
+      function kin() {
+        location.replace('./kin.html');
+      }
+
+      function toggleShowMenu() {
+        const div = document.querySelector('#left-detail-panel');
+        if (div.style.display == 'none') {
+          div.style.display = 'block';
+        } else if (div.style.display === 'block') {
+          div.style.display = 'none';
+        }
+      }
+    </script>
+  </body>
+</html>

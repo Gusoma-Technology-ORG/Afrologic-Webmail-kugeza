@@ -1,95 +1,534 @@
-<div class="screen LoginLayout" style="display: none;" data-bind="css: {'with_bottom_text': sBottomInfoHtmlText !== ''}">
-	<div class="login_panel login">
-		<div class="login_panel_content" style="backface-visibility: inherit;">
-			<div class="header" data-bind="css: {'custom_logo': sCustomLogoUrl}">
-				<!-- ko if: sCustomLogoUrl === '' --><span class="icon"></span><!-- /ko -->
-				<!-- ko if: sCustomLogoUrl !== '' --><img data-bind="attr: {'src': sCustomLogoUrl}"/><!-- /ko -->
-				<span class="text" data-bind="i18n: {'key': 'COREWEBCLIENT/HEADING_LOGIN'}"></span>
-			</div>
-			
-			<div class="content login clearfix">
-				<form class="form fields" action="#" autocomplete="on" onsubmit="return false;" data-bind="command: loginCommand">
-					<div class="fieldset">
-						<div class="row login" data-bind="css: {'focused': loginFocus(), 'filled': login().length > 0, shake: shake()}">
-							<label for="login_login" class="placeholder"></label>
-							<span class="value">
-								<input id="login_login" tabindex="1" class="input" name="login" type="text" spellcheck="false"
-									   data-bind="value: login, hasfocus: loginFocus, valueUpdate: 'afterkeydown', 
-										i18n: {'key': 'COREWEBCLIENT/LABEL_LOGIN', 'type': 'placeholder'}, initDom: loginDom" />
-							</span>
-						</div>
-						<div class="row password" data-bind="css: {'focused': passwordFocus(), 'filled': password().length > 0, shake: shake()}">
-							<label for="login_password" class="placeholder"></label>
-							<span class="value">
-								<input id="login_password" tabindex="3" class="input" name="password" type="password" spellcheck="false"
-									   data-bind="value: password, hasfocus: passwordFocus, valueUpdate: 'afterkeydown', 
-										i18n: {'key': 'COREWEBCLIENT/LABEL_PASSWORD', 'type': 'placeholder'}, initDom: passwordDom" />
-							</span>
-						</div>
-					</div>
-					{%INCLUDE-START/Login-Before-Submit-Button/INCLUDE-END%}
-					<!-- ko foreach: beforeButtonsControllers -->
-						<!-- ko template: { name: $data.ViewTemplate, data: $data} --><!-- /ko -->
-					<!-- /ko -->
-					<div class="row buttons">
-						<button type="submit" tabindex="5" class="button login" data-bind="text: signInButtonText, command: loginCommand"></button>
-					</div>
-					<div class="row signme" data-bind="visible: bUseSignMe">
-						<span>
-							<label class="custom_checkbox" data-bind="css: {'checked': signMe, 'focus': signMeFocused}">
-								<span class="icon"></span>
-								<input id="signme" tabindex="4" type="checkbox" data-bind="checked: signMe, hasfocus: signMeFocused" />
-							</label>
-							<label class="signme_label" for="signme" data-bind="i18n: {'key': '%MODULENAME%/LABEL_REMEMBER_ME'}"></label>
-						</span>
-					</div>
-					{%INCLUDE-START/Login-After/INCLUDE-END%}
-				</form>
-				<div class="clear"></div>
-			</div>
-			
-			<!--{%INCLUDE-START/Login-Before-Description/INCLUDE-END%}-->
-			<div class="description" data-bind="visible: sInfoText !== '', html: sInfoText"></div>
-			<!--{%INCLUDE-START/Login-After-Description/INCLUDE-END%}-->
-			<div class="clear"></div>
-			
-			<div class="languages demo" data-bind="visible: bAllowChangeLanguage && !bUseDropdownLanguagesView">
-				<div class="langs_heading" data-bind="text: headingSelectLanguage"></div>
-				<div data-bind="foreach: aLanguages">
-					<span class="item" data-bind="css: value + ($parent.currentLanguage() === value ? ' selected' : ''), click: function () { $parent.changeLanguage(value); }">
-						<span class="item_content">
-							<span class="icon"></span>
-							<span class="text" data-bind="text: name"></span>
-						</span>
-					</span>
-				</div>
-			</div>
-		</div>
-		
-		<div class="languages" data-bind="visible: bAllowChangeLanguage && bUseDropdownLanguagesView">
-			<span class="custom_selector right" data-bind="dropdown: {'control': false}">
-				<span class="name" data-bind="css: currentLanguage">
-					<span class="icon"></span>
-					<span class="text" data-bind="text: currentLanguage"></span>
-				</span>
-				<span class="control">
-					<span class="icon"></span>
-				</span>
-				<span class="dropdown">
-					<span class="dropdown_helper">
-						<span class="dropdown_arrow"><span></span></span>
-						<span class="dropdown_content" data-bind="foreach: aLanguages">
-							<span class="item" data-bind="css: value + ($parent.currentLanguage() === value ? ' selected' : ''), click: function () { $parent.changeLanguage(value); }">
-								<span class="icon"></span>
-								<span class="text" data-bind="text: name"></span>
-							</span>
-						</span>
-					</span>
-				</span>
-			</span>
-		</div>
-	</div>
-	<div class="vhelper"></div>
-	<div class="bottom_description" data-bind="visible: sBottomInfoHtmlText !== '', html: sBottomInfoHtmlText"></div>
-	<!--{%INCLUDE-START/Login-Footer/INCLUDE-END%}-->
-</div>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./assets/style.css" />
+    <style>
+        @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        html,
+        body {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            place-items: center;
+            background: rgb(2, 0, 36);
+            background: linear-gradient( 90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 82, 255, 1) 100%);
+        }
+        
+         ::selection {
+            background: rgba(9, 9, 121, 1);
+            color: #fff;
+        }
+        
+        .myRightCtn {
+            position: relative;
+            background: rgb(2, 0, 36);
+            border-radius: 25px;
+            height: 100%;
+            padding: 25px;
+            color: rgb(192, 192, 192);
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .row {
+            height: 100%;
+        }
+        
+        .myCard {
+            position: relative;
+            background: #fff;
+            height: 100%;
+            border-radius: 25px;
+            -webkit-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+        }
+        
+        span {
+            color: #fff;
+            font-size: 25px;
+        }
+        
+        .cong-text {
+            font-weight: bold;
+            font-size: 28px;
+        }
+        
+        .myRightCtn b,
+        p {
+            color: #fff;
+            font-size: 18px;
+        }
+        
+        .myRightCtn ul li {
+            color: #fff;
+            font-size: 14px;
+        }
+        
+        .box {
+            position: relative;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .butt_out {
+            background: transparent;
+            color: #fff;
+            width: 120px;
+            border: 2px solid#fff;
+            border-radius: 25px;
+            padding: 10px;
+            -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+        }
+        
+        .butt_out:hover {
+            border: 2px solid#eecbff;
+        }
+        
+        .butt_out:focus {
+            outline: none;
+        }
+        
+        .wrapper {
+            overflow: hidden;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 5px;
+        }
+        
+        .wrapper .title-text {
+            display: flex;
+            width: 200%;
+        }
+        
+        .wrapper .title {
+            width: 50%;
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .wrapper .slide-controls {
+            position: relative;
+            display: flex;
+            height: 50px;
+            width: 100%;
+            overflow: hidden;
+            margin: 30px 0 10px 0;
+            justify-content: space-between;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+        }
+        
+        .slide-controls .slide {
+            height: 100%;
+            width: 100%;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 48px;
+            cursor: pointer;
+            z-index: 1;
+            transition: all 0.6s ease;
+        }
+        
+        .slide-controls label.signup {
+            color: #000;
+        }
+        
+        .slide-controls .slider-tab {
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            left: 0;
+            z-index: 0;
+            border-radius: 5px;
+            background: linear-gradient( 90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 82, 255, 1) 100%);
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        input[type="radio"] {
+            display: none;
+        }
+        
+        #signup:checked~.slider-tab {
+            left: 50%;
+        }
+        
+        #signup:checked~label.signup {
+            color: #fff;
+            cursor: default;
+            user-select: none;
+        }
+        
+        #signup:checked~label.login {
+            color: #000;
+        }
+        
+        #login:checked~label.signup {
+            color: #000;
+        }
+        
+        #login:checked~label.login {
+            cursor: default;
+            user-select: none;
+        }
+        
+        .wrapper .form-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .form-container .form-inner {
+            display: flex;
+            width: 200%;
+        }
+        
+        .form-container .form-inner form {
+            width: 50%;
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .form-inner form .field {
+            height: 50px;
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .form-inner form .field input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            padding-left: 15px;
+            border-radius: 5px;
+            border: 1px solid lightgrey;
+            border-bottom-width: 2px;
+            font-size: 17px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-inner form .field input:focus {
+            border-color: rgba(9, 9, 121, 1);
+        }
+        
+        .form-inner form .field input::placeholder {
+            color: #999;
+            transition: all 0.3s ease;
+        }
+        
+        form .field input:focus::placeholder {
+            color: #b3b3b3;
+        }
+        
+        .form-inner form .pass-link {
+            margin-top: 5px;
+        }
+        
+        .form-inner form .signup-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .form-inner form .pass-link a,
+        .form-inner form .signup-link a {
+            color: rgba(0, 82, 255, 1);
+            text-decoration: none;
+        }
+        
+        .form-inner form .pass-link a:hover,
+        .form-inner form .signup-link a:hover {
+            text-decoration: underline;
+        }
+        
+        form .btn {
+            height: 50px;
+            width: 100%;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        form .btn .btn-layer {
+            height: 100%;
+            width: 300%;
+            position: absolute;
+            left: -100%;
+            background: linear-gradient( 90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 82, 255, 1) 100%);
+            border-radius: 5px;
+            transition: all 0.4s ease;
+        }
+        
+        form .btn:hover .btn-layer {
+            left: 0;
+        }
+        
+        form .btn input[type="submit"] {
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            position: relative;
+            background: none;
+            border: none;
+            color: #fff;
+            padding-left: 0;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .logo-title {
+            font-size: 60px;
+            color: #120270;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        
+        .logo-slogan {
+            font-size: 20px;
+            color: #120270;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+        
+        .adv-text {
+            color: #b5b5b5;
+        }
+        
+        .contact {
+            position: absolute;
+            bottom: 0;
+            color: #bf0000;
+            margin-bottom: 0;
+            font-size: 12px;
+        }
+        
+        .highlight {
+            background-color: yellow;
+        }
+        
+        input[type="radio"]:checked.btn-check+label {
+            font-weight: bold;
+            background-color: green !important;
+        }
+        
+        li {
+            font-size: 91%;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="myCard">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="myRightCtn">
+                        <div class="box">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <input type="radio" class="btn-check" name="options" id="option4" onclick="en()" autocomplete="off" />
+                                <label class="btn btn-secondary" for="option4">EN</label>
+                                <input type="radio" class="btn-check" name="options" id="option3" onclick="fre()" autocomplete="off" />
+                                <label class="btn btn-secondary" for="option3">FR</label>
+                                <input type="radio" class="btn-check" name="options" id="option2" onclick="kin()" autocomplete="off" checked />
+                                <label class="btn btn-secondary" for="option2">KIN</label>
+                            </div>
+
+                            <div class="my-5 d-flex flex-column">
+                                <span class="adv-text">Gukoresha byoroshye.</span>
+                                <span class="adv-text">
+                    Igikoresho cy'itumanaho mu Kinyarwanda.
+                  </span>
+                                <span class="adv-text">
+                    Kohereza no kwakira imeri ku buntu.
+                  </span>
+                            </div>
+
+                            <div class="my-4" id="left-detail-panel" style="display: none">
+                                <b>Twishimiye gushiraho konti yawe y'ubuntu !</b>
+                                <p>- Nyamuneka andika aya makuru.</p>
+
+                                <b>Imeri yawe ni izina ryanyuma.izina rya mbere@kugeza.com</b>
+                                <ul>
+                                    <li>
+                                        Urashobora kuyikoresha kugirango winjire kuri konte yawe
+                                    </li>
+                                    <li>
+                                        Urashobora gukoresha kohereza no kwakira ubutumwa bwa buri wese
+                                    </li>
+                                </ul>
+
+                                <b>Ijambo ryibanga ni: ijambo ryibanga</b>
+                                <ul>
+                                    <li>Ntugasangire n'umuntu uwo ari we wese</li>
+                                    <li>Bika ahantu hizewe</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="https://email.kugeza.com/kugeza.png" height="120" width="250" alt="" />
+                        </div>
+                    </div>
+                    <div class="wrapper mx-auto">
+                        <div class="title-text">
+                            <div class="title login">Injira</div>
+                            <div class="title signup">Kwiyandikisha</div>
+                        </div>
+                        <div class="form-container">
+                            <div class="slide-controls">
+                                <input onclick="toggleShowMenu()" type="radio" name="slide" id="login" checked />
+                                <input onclick="toggleShowMenu()" type="radio" name="slide" id="signup" />
+                                <label for="login" class="slide login">Injira</label>
+                                <label for="signup" class="slide signup">Kwiyandikisha</label>
+                                <div class="slider-tab"></div>
+                            </div>
+                            <div class="form-inner">
+                                <form action="#" class="login">
+                                    <div class="field">
+                                        <input type="text" placeholder="imeri" required />
+                                    </div>
+                                    <div class="field">
+                                        <input type="password" placeholder="ijambo ry'ibanga" required />
+                                    </div>
+                                    <!-- <div class="pass-link">
+                      <a href="#">Forgot password?</a>
+                    </div> -->
+                                    <div class="field btn">
+                                        <div class="btn-layer"></div>
+                                        <input type="submit" value="Injira" />
+                                    </div>
+                                    <div class="signup-link">
+                                        Ntabwo ari umunyamuryango?
+                                        <a href="">Iyandikishe nonaha</a>
+                                    </div>
+                                </form>
+                                <form action="#" class="signup">
+                                    <div class="field">
+                                        <input type="text" placeholder="Izina rya mbere" required />
+                                    </div>
+                                    <div class="field">
+                                        <input type="text" placeholder="Izina rya nyuma" required />
+                                    </div>
+                                    <div class="field">
+                                        <input type="password" placeholder="Ijambo ry'ibanga" required />
+                                    </div>
+
+                                    <div class="form-group my-3">
+                                        <label>
+                        <input
+                          id="check_1"
+                          name="check_1"
+                          type="checkbox"
+                          required
+                        />
+                        <small class="mx-1"
+                          >Nemeye ingingo n'ibisabwa muri iyi porogaramu.
+                          Nemeranya n'amabwiriza yerekeye ubuzima bwite bw'iyi
+                          porogaramu.</small
+                        >
+                      </label>
+                                    </div>
+
+                                    <div class="form-group my-3">
+                                        <label>
+                        <input
+                          id="check_1"
+                          name="check_1"
+                          type="checkbox"
+                          required
+                        />
+                        <small class="mx-1">
+                          "Kanda aka gasanduku niba ushaka ko sisitemu yibuka
+                          amakuru yawe yinjira ako kanya - ntukande kuri aka
+                          gasanduku niba ukoresha igikoresho gisangiwe."
+                        </small>
+                      </label>
+                                    </div>
+
+                                    <div class="field btn">
+                                        <div class="btn-layer"></div>
+                                        <input type="submit" value="Iyandikishe" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        const loginText = document.querySelector(".title-text .login");
+        const loginForm = document.querySelector("form.login");
+        const loginBtn = document.querySelector("label.login");
+        const signupBtn = document.querySelector("label.signup");
+        const signupLink = document.querySelector("form .signup-link a");
+
+        signupBtn.onclick = () => {
+            loginForm.style.marginLeft = "-50%";
+            loginText.style.marginLeft = "-50%";
+        };
+
+        loginBtn.onclick = () => {
+            loginForm.style.marginLeft = "0%";
+            loginText.style.marginLeft = "0%";
+        };
+
+        signupLink.onclick = () => {
+            signupBtn.click();
+            return false;
+        };
+
+        function en() {
+            location.replace("./language/en.html");
+        }
+
+        function fre() {
+            location.replace("./language/fr.html");
+        }
+
+        function kin() {
+            location.replace("./language/kin.html");
+        }
+
+        function toggleShowMenu() {
+            const div = document.querySelector("#left-detail-panel");
+            if (div.style.display == "none") {
+                div.style.display = "block";
+            } else if (div.style.display === "block") {
+                div.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
